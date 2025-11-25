@@ -1,0 +1,275 @@
+/* ===== GERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+/* ===== DESTAQUES SECTION ===== */
+.destaques-container {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.destaques-titulo {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+}
+
+/* ===== CARDS ===== */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+}
+
+.card-text:last-of-type {
+    margin-bottom: 1rem;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* ===== FORMULÁRIO ===== */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.form-label {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* ===== RESULTADOS ===== */
+#resultados {
+    display: flex;
+    justify-content: center;
+}
+
+.alert {
+    margin-top: 2rem;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ===== LAYOUT RESPONSIVO - DESKTOP (≥992px) ===== */
+@media (min-width: 992px) {
+    .col-md-3 {
+        max-width: calc(33.333% - 1rem);
+        flex: 0 0 calc(33.333% - 1rem);
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+}
+
+/* ===== LAYOUT RESPONSIVO - TABLET (768px - 991px) ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-3 {
+        max-width: calc(50% - 1rem);
+        flex: 0 0 calc(50% - 1rem);
+        padding: 0.5rem;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== LAYOUT RESPONSIVO - MOBILE (<768px) ===== */
+@media (max-width: 767px) {
+    .col-md-3 {
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .destaques-container {
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .destaques-titulo {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-img-top {
+        height: 220px;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        max-width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-in-out;
+}
